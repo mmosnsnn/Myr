@@ -178,4 +178,4 @@ const {
     setTimeout(() => {
         Xasena();
     }, 6000);
-web()
+
