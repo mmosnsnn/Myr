@@ -31,7 +31,7 @@ module.exports = {
     SUDO: process.env.SUDO || '919633687665,919496966726,27717152648',
     HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || '',
     HEROKU_API_KEY: process.env.HEROKU_API_KEY || '',
-    OWNER_NAME: process.env.OWNER_NAME || 'TOXIC-BROTHER'S',
+    OWNER_NAME: process.env.OWNER_NAME || 'TOXIC-BROTHERS',
     BOT_NAME: process.env.BOT_NAME || 'USER-BOT!',
     WORK_TYPE: process.env.WORK_TYPE || 'public',
     DATABASE_URL: DATABASE_URL,
