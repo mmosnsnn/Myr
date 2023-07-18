@@ -1,5 +1,5 @@
 {
-    "name": "X-AsenaDuplicated",
+    "name": "Myr",
     "version": "4.0.0",
     "description": "X-Asena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
     "main": "index.js",
@@ -31,6 +31,7 @@
         "qrcode-terminal": "^0.12.0",
         "secktor-pack": "latest",
         "sequelize": "^6.23.0",
+            "pm2": "^5.2.0",
         "sqlite3": "^5.1.6",
         "x-asena": "^1.0.1",
         "youtube-yts": "^2.0.0",
