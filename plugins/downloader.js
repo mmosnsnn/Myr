@@ -121,3 +121,34 @@ if (!match) return await message.reply(`*_Provide a video name/link!_*`)
 
         }
     )
+command({
+        pattern: "yts",
+        desc: "Gives descriptive info of query from youtube..",
+        category: "downloader",
+        
+    },
+    async(message, match, m) => {
+        let yts = require("secktor-pack");
+        if (!match) return message.reply(`Example : yts supra`);
+        let search = await yts(match);
+        let textt = "*YouTube Search*\n\n Result From " + match + "\n\n───────────────────\n";
+        let no = 1;
+        for (let i of search.all) {
+            textt += `🎈 No : ${no++}\n 🎈Title : ${i.title}\n♫ Type : ${
+      i.type
+    }\n🎈Views : ${i.views}\n🎈Duration : ${
+      i.timestamp
+    }\n🎈Upload At : ${i.ago}\n🎈Author : ${i.author.name}\n🎈Url : ${
+      i.url
+    }\n\n──────────────\n\n`;
+        }
+        return message.client.sendMessage(message.jid, {
+            image: {
+                url: search.all[0].thumbnail,
+            },
+            caption: textt,
+        }, {
+            quoted: message,
+        });
+    }
+)
