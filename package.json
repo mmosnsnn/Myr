@@ -3,6 +3,11 @@
     "version": "4.0.0",
     "description": "X-Asena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
     "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "pm2 start . --attach --namespace Myr --name Myr --time",
+        "stop": "pm2 stop Myr"
+  },
     "directories": {
         "lib": "lib"
     },
