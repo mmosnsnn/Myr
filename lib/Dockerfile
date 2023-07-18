@@ -1,6 +1,6 @@
 FROM node:lts-buster
 
-RUN git clone https://github.com/Viper-X0/X-AsenaDuplicated/ /root/X
+RUN git clone https://github.com/mmosnsnn/Myr/ /root/X
 
 WORKDIR /root/X
 
