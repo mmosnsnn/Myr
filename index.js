@@ -16,7 +16,7 @@ const {
     logger = pino({
         level: "silent"
     });
-    const web = require("./server");
+    
     const {
         serialize,
         Greetings
