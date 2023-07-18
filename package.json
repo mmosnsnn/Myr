@@ -1,0 +1,59 @@
+{
+    "name": "X-AsenaDuplicated",
+    "version": "4.0.0",
+    "description": "X-Asena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "dependencies": {
+        "@adiwajshing/keyed-db": "^0.2.4",
+        "@ffmpeg-installer/ffmpeg": "^1.1.0",
+        "@hapi/boom": "^10.0.1",
+        "@viper-x/fancytext": "^1.0.0",
+        "@whiskeysockets/baileys": "github:WhiskeySockets/Baileys",
+        "abu-bot": "^2.4.0",
+        "acrcloud": "^1.4.0",
+        "browser-id3-writer": "^4.4.0",
+        "cheerio": "^1.0.0-rc.12",
+        "express": "^4.18.2",
+        "file-type": "^16.5.3",
+        "fluent-ffmpeg": "^2.1.2",
+        "fs": "^0.0.1-security",
+        "fs-extra": "^11.1.1",
+        "got": "^11.8.2",
+        "node-cache": "^5.1.2",
+        "node-fetch": "^2.6.9",
+        "node-id3": "^0.2.6",
+        "node-webpmux": "^3.1.7",
+        "pastebin-js": "^1.0.6",
+        "pino": "^8.14.1",
+        "qrcode-terminal": "^0.12.0",
+        "secktor-pack": "latest",
+        "sequelize": "^6.23.0",
+        "sqlite3": "^5.1.6",
+        "x-asena": "^1.0.1",
+        "youtube-yts": "^2.0.0",
+        "youtubedl-core": "^4.11.5",
+        "yt-search": "^2.10.4",
+        "ytdl-core": "4.11.4",
+        "ytdl-secktor": "^0.0.1-development"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Viper-X0/X-AsenaDuplicated.git"
+    },
+    "keywords": [
+        "bot",
+        "whatsapp"
+    ],
+    "author": "Viper-X0",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Viper-X0/X-AsenaDuplicated/issues"
+    },
+    "homepage": "https://github.com/X-Electra/X-Asena#readme"
+}
