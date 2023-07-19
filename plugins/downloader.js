@@ -5,7 +5,8 @@ const {
   getJson,
   getUrl,
   isIgUrl,
- fetchBuffer, 
+ fetchBuffer,
+  isPrivate,
 } = require("../lib/");
 
 const YT = require("../lib/ytdl");
@@ -14,7 +15,7 @@ const yts = require('secktor-pack')
 const fs = require('fs')
 var videotime = 60000 // 1000 min
 var dlsize = 1000 // 1000mb
-
+const fbInfoVideo = require('fb-info-video'); 
 const ffmpeg = require("fluent-ffmpeg");
       
 
@@ -152,4 +153,43 @@ command({
             quoted: message,
         });
     }
+)
+command(
+    {
+        pattern: "fb",
+        fromMe: isPrivate,
+        desc: "fb downloader.",
+        category: "downloader",
+    },
+    async (message, match) => {
+
+if(!match) return message.reply(`*_Please Give me Facebook Video Url_*`);
+fbInfoVideo.getInfo(match)
+  .then(info =>{
+let vurl=info.video.url_video;
+
+
+      let data  ="*Video Name     :* "+  info.video.title;
+	data +="\n*Video Views    :* "+  info.video.view;
+	data +="\n*Video Comments :* "+  info.video.comment;
+	data +="\n*Video Likes    :* "+info.video.reaction.Like ;
+	//data +="\n*Video Link     :* "+  vurl;
+
+//console.log(info);
+	data +=config.caption ;
+                        let buttonMessage = {
+                        video: {url:vurl},
+                        mimetype: 'video/mp4',
+                        fileName: info.video.title+`.mp4`,
+                        caption :"     *FACEBOOK DOWNLOADER*  \n"+data
+                        
+                    }
+                 message.client.sendMessage(message.jid, buttonMessage, { quoted: m });
+
+
+
+})
+  .catch(err => {message.reply("Error, Video Not Found\n *Please Give Me A Valid Url*");
+			console.error(err);})
+}
 )
