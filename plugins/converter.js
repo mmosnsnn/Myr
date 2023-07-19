@@ -11,7 +11,7 @@ command(
         desc: "text to speech.",
         category: "converter",
     },
-    async (message, match) => {
+    async (message, match,m) => {
         if (!match) {
             message.reply('Where is the text?')
         } else {
