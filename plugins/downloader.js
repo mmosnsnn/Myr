@@ -10,7 +10,7 @@ const {
 } = require("../lib/");
 
 const YT = require("../lib/ytdl");
-const ytdl = require('ytdl-user-bot')
+const ytdl = require('ytdl-secktor')
 const yts = require('secktor-pack')
 const fs = require('fs')
 var videotime = 60000 // 1000 min
