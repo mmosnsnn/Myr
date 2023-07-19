@@ -9,7 +9,7 @@ command(
         pattern: "tts",
         fromMe: isPrivate,
         desc: "text to speech.",
-        category: "downloader",
+        category: "converter",
     },
     async (message, match) => {
         if (!match) {
