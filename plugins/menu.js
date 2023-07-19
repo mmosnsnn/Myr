@@ -6,7 +6,9 @@ const {
     clockString
 } = require("../lib");
 const {
-    config
+    config,
+    caption,
+    CAPTION
 } = require("../config");
 const {
     tiny
