@@ -7,7 +7,9 @@ const {
 } = require("../lib");
 const {
     OWNER_NAME,
-    BOT_NAME
+    BOT_NAME,
+    caption,
+    CAPTION,
 } = require("../config");
 const {
     tiny
