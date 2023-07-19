@@ -128,17 +128,18 @@ command({
         
     },
     async(message, match, m) => {
+      message.client.sendMessage(message.jid, { react: { text: "🔎" , key: m.key }}) 
         let yts = require("secktor-pack");
         if (!match) return message.reply(`Example : yts supra`);
         let search = await yts(match);
-        let textt = "*YouTube Search*\n\n Result From " + match + "\n\n───────────────────\n";
+        let textt = "*yᴏᴜᴛᴜʙᴇ ꜱᴇᴀʀᴄʜ*\n\n ʀᴇꜱᴜʟᴛ ꜰʀᴏᴍ " + match + "\n\n───────────────────\n";
         let no = 1;
         for (let i of search.all) {
-            textt += `🎈 No : ${no++}\n 🎈Title : ${i.title}\n♫ Type : ${
+            textt += `🎈 ɴᴏ : ${no++}\n 🎈ᴛɪᴛʟᴇ : ${i.title}\n♫ ᴛyᴩᴇ : ${
       i.type
-    }\n🎈Views : ${i.views}\n🎈Duration : ${
+    }\n🎈ᴠɪᴇᴡꜱ : ${i.views}\n🎈ᴅᴜʀᴀᴛɪᴏɴ : ${
       i.timestamp
-    }\n🎈Upload At : ${i.ago}\n🎈Author : ${i.author.name}\n🎈Url : ${
+    }\n🎈ᴜᴩʟᴏᴀᴅ ᴀᴛ : ${i.ago}\n🎈ᴀᴜᴛʜᴏʀ : ${i.author.name}\n🎈ᴜʀʟ : ${
       i.url
     }\n\n──────────────\n\n`;
         }
