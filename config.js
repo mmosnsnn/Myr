@@ -23,6 +23,7 @@ module.exports = {
     RMBG_KEY: process.env.RMBG_KEY || false,
     BRANCH: 'master',
     caption :process.env.CAPTION || " *•ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴜꜱᴇʀ-ʙᴏᴛ•* ",
+    disablepm: process.env.DISABLE_PM || "true",
     autoreaction: process.env.AUTO_REACTION || 'on',
     PACKNAME: process.env.PACKNAME || '',
     WELCOME_MSG: process.env.WELCOME_MSG || 'Hi @user Welcome to @gname',
