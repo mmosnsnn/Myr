@@ -1,6 +1,7 @@
 const {
     command,
-    isPrivate
+    isPrivate,
+    webp2mp4
 } = require("../lib/")
 const googleTTS = require("google-tts-api");
 const { toAudio } = require("../lib/media");
@@ -32,6 +33,24 @@ command(
             })
         }
     });
+command(
+  {
+    pattern: "mp4",
+    fromMe: isPrivate,
+    desc: "Changes sticker to Video",
+    type: "converter",
+  },
+  async (message, match, m) => {
+    if (!message.reply_message)
+      return await message.reply("_Reply to a sticker_");
+    if (message.reply_message.mtype !== "stickerMessage")
+      return await message.reply("_Not a sticker_");
+    let buff = await m.quoted.download();
+    let buffer = await webp2mp4(buff);
+    return await message.sendMessage(buffer, {}, "video");
+  }
+);
+
 command(
   {
     pattern: "photo",
